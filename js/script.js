@@ -45,7 +45,7 @@ const paragraphs = document.querySelectorAll("p");
 for(var i = 0; i < paragraphs.length; i++) {
     paragraphs[i].style.color = "red";
 
-    console.log(paragraphs);
+    console.log(paragraphs[i]);
 }
 
 // Question 6
@@ -68,9 +68,38 @@ testFor();
 
 // Question 8
 
+const catsAgeBox = document.querySelector(".cat-container");
+
 function createCats(cats) {
-    for(var i = 0; i < cats.length;)
-    console.log(cats[i].age);
+
+    for(var i = 0; i < cats.length; i++) {
+        console.log(cats[i].age);
+
+    let catsAge ="Age unknown";
+
+    if (cats.age !== undefined && cats.age !== null) {
+        catsAge = cats.age;
+        console.log(cats.age);
+    }
+
 }
 
 createCats();
+
+}
+
+catsAgeBox.innerHTML = `
+<div>
+<h5>${cats[""]}</h5>
+<p>${cats[""]}</p>
+</div>
+<div>
+<h5>${cats[""]}</h5>
+<p>${cats[""]}</p>
+</div>
+<div>
+<h5>${cats[""]}</h5>
+<p>${cats[""]}</p>
+</div>`
+
+console.log(cats);
